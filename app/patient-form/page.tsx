@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { useSocket } from "@/lib/useSocket"
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export default function PatientFormPage() {
   const router = useRouter()
   const { socket, isConnected } = useSocket()

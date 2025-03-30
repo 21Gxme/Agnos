@@ -1,10 +1,13 @@
 import { type NextRequest, NextResponse } from "next/server"
 
 // Extend the global type to include the patients property
-/* eslint-enable no-var */
+
 declare global {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-var */
   var patients: any[] | undefined
   var socketIo: any | undefined
+  /* eslint-enable no-var */
 }
 
 // Get a specific patient by ID

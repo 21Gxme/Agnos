@@ -1,8 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server"
 
 // Get all patients
-export async function GET(request: NextRequest) {
-  // Access the global patients array
+export async function GET() {
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   let patients: any[] = []
 
   if (typeof global !== "undefined" && global.patients) {

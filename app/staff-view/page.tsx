@@ -26,13 +26,15 @@ type PatientData = {
 // Define live form update type
 type LiveFormData = {
   socketId: string
-  formData: any
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  formData: Record<string, any>
   timestamp?: string
 }
 
 export default function StaffViewPage() {
   const { socket, isConnected } = useSocket()
   const [patients, setPatients] = useState<PatientData[]>([])
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   const [activeTab, setActiveTab] = useState("all")
   const [liveForms, setLiveForms] = useState<Record<string, any>>({})
   const [showLiveForms, setShowLiveForms] = useState(true)
@@ -505,7 +507,7 @@ export default function StaffViewPage() {
                                   <div className="flex mt-2 space-x-2">
                                     <select
                                       value={patient.status}
-                                      onChange={(e) => handleStatusChange(patient.id, e.target.value as any)}
+                                      onChange={(e) => handleStatusChange(patient.id, e.target.value as "submitted" | "active" | "inactive")}
                                       className="p-1 text-xs border border-gray-300 rounded-md"
                                     >
                                       <option value="submitted">Submitted</option>
