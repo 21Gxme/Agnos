@@ -618,7 +618,7 @@ export default function PatientFormPage() {
                         name="emergencyContact"
                         value={formData.emergencyContact}
                         onChange={handleChange}
-                        placeholder="Jane Doe: +1 (555) 987-6543"
+                        placeholder="Somying Rakjing: +66 12-345-6789"
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <p className="mt-1 text-xs text-gray-500">Name and phone number of emergency contact</p>
@@ -634,7 +634,7 @@ export default function PatientFormPage() {
                         name="religion"
                         value={formData.religion}
                         onChange={handleChange}
-                        placeholder="Christianity"
+                        placeholder="Buddhist"
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                     </div>
