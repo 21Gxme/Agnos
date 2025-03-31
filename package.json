@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js",
-    "dev": "nodemon src/index.js",
-    "build": "[my-framework] build --output public"
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "test-socket": "node scripts/test-socket.js"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.17",
